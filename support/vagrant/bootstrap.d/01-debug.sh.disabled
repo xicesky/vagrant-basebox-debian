@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+#echo "XXX Shell: $SHELL"
+
+source $SCRIPT_BASE/config.sh
+
+ODIR="/vagrant/local"
+
+export >"$ODIR/exports.txt"
+set >"$ODIR/env.txt"
+
+pkgmgr_update

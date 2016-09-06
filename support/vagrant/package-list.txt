@@ -1,0 +1,7 @@
+zsh vim screen
+sudo git
+htop iotop mc pv bc
+gzip bzip2 p7zip-full
+bootlogd
+curl wget netcat-openbsd nmap
+unattended-upgrades apt-transport-https
