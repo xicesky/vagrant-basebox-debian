@@ -1,0 +1,11 @@
+# This file contains default non-project-specific settings for 'stack', used
+# in all projects.  For more information about stack's configuration, see
+# http://docs.haskellstack.org/en/stable/yaml_configuration/
+
+# Author
+templates:
+  params:
+    author-email: sky@q1cc.net
+    author-name: Markus Dangl
+    copyright: (c) 2016 Markus Dangl
+    github-username: xicesky

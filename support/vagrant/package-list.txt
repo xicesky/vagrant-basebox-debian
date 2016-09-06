@@ -5,3 +5,4 @@ gzip bzip2 p7zip-full
 bootlogd
 curl wget netcat-openbsd nmap
 unattended-upgrades apt-transport-https
+llvm-3.5 libedit-dev

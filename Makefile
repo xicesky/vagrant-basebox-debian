@@ -11,7 +11,7 @@ CONFIG_DIR 			:= $(LOCAL_DIR)/config
 BOX_OUTPUT_DIR 		:= $(LOCAL_DIR)
 
 # What we are building
-BOX_NAME            := sky-debian-basebox
+BOX_NAME            := sky-debian-haskell-basebox
 BOX_VERSION         := 8.0.0
 
 # Where to "cache" the base boxes we build from
