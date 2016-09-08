@@ -59,6 +59,9 @@ box: $(BOX_OUTPUT)
 install: $(BOX_OUTPUT)
 		vagrant box add --name $(BOX_NAME) $(BOX_OUTPUT)
 
+uninstall:
+		vagrant box remove $(BOX_NAME)
+
 ################################################################################
 # How to actually build a new box
 
