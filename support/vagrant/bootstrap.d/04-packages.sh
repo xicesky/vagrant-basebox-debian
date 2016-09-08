@@ -50,5 +50,6 @@ if $SKIP_PACKAGES ; then
     echo "Alter SKIP_PACKAGES in the config to enable it."
 else
     pkgmgr_update
+    pkgmgr_upgrade
     pkgmgr_install $(cat "$PACKAGE_LIST")
 fi
