@@ -9,17 +9,12 @@ source $SCRIPT_BASE/config.sh
 
 AUTHORIZED_KEYS="/home/vagrant/.ssh/authorized_keys"
 
-[ -f "$AUTHORIZED_KEYS" ] || \
-    complain 01 \
-        "Missing system file:\n            %s\nIs this a proper debian system?\n" \
-        "$SOURCES_LIST"
-
-# We should have a package list
+# We should have a list of ssh keys
 AUTHORIZED_KEYS_SRC="$SCRIPT_BASE/vagrant-ssh-keys.txt" 
 
 if [ ! -f "$AUTHORIZED_KEYS_SRC" ] ; then
     complain 09 \
-        "Could not find the vagrant ssh key file at:\n            %s\n" \
+        "Could not find the vagrant ssh key list at:\n            %s\n" \
         "$AUTHORIZED_KEYS_SRC"
 fi
 
@@ -33,6 +28,7 @@ fi
 ####################################################################################################
 # Install packages
 
+mkdir -p /home/vagrant/.ssh
 cat "$AUTHORIZED_KEYS_SRC" >>"$AUTHORIZED_KEYS"
 #chown vagrant: "$AUTHORIZED_KEYS"
 #chmod 644 "$AUTHORIZED_KEYS"
