@@ -18,6 +18,10 @@ export SCRIPT_BASE
 export LOCAL_DIR
 export POSTGRESQL_VERSION
 
+# Also force apt to avoid interactive prompts
+DEBIAN_FRONTEND=noninteractive
+export DEBIAN_FRONTEND
+
 ####################################################################################################
 # Utility functions
 
@@ -48,12 +52,19 @@ pkgmgr_install() {
 
 export -f pkgmgr_install
 
+pkgmgr_install_deb() {
+    dpkg -i "$@"
+}
+
+export -f pkgmgr_install_deb
+
 pkgmgr_remove() {
     aptitude purge -y "$@"
 }
 
 export -f pkgmgr_remove
 
+# Usage inst [-f] SOURCE DESTINATION [OWNER] [MODE]
 inst() {
     FORCE=false
     if [ "$1" == "-f" ] ; then
