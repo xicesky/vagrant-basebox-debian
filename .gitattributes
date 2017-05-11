@@ -5,6 +5,8 @@
 *.java text eol=lf
 *.sh eol=lf
 *.py eol=lf
+*.yaml eol=lf
+Makefile eol=lf
 package-list.txt eol=lf
 .gitattributes text eol=lf
 .gitignore text eol=lf
