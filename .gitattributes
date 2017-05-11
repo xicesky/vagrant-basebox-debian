@@ -1,0 +1,10 @@
+* text=auto
+*.php text
+*.txt text
+*.bat text eol=crlf
+*.java text eol=lf
+*.sh eol=lf
+*.py eol=lf
+package-list.txt eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
