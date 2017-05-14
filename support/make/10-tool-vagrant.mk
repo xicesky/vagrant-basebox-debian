@@ -2,7 +2,7 @@
 # Find vagrant and some relevant paths
 
 # Defaults
-VAGRANT := $(shell which vagrant)
+VAGRANT := $(shell support/bash/which.sh -f vagrant)
 VAGRANT_HOME := $(REAL_HOME)/.vagrant.d
 VAGRANT_DEFAULT_PROVIDER := virtualbox
 

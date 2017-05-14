@@ -2,11 +2,14 @@
 # OS detection
 OSNAME := $(shell uname -s)
 ifeq ($(OS),Windows_NT)
+	MY_OS := winnt
     ifneq (,$(findstring CYGWIN,$(OSNAME)))
         # Detected cygwin
         MY_OS := cygwin
-    else
-        MY_OS := winnt
+    endif
+    ifneq (,$(findstring MINGW,$(OSNAME)))
+        # Detected mingw / msys
+        MY_OS := msys
     endif
 else
     MY_OS := linux
