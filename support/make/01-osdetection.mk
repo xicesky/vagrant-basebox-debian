@@ -22,6 +22,9 @@ REAL_HOME := $(HOME)
 ifeq ($(MY_OS),cygwin)
 	REAL_HOME := $(shell cygpath -u "$(USERPROFILE)")
 endif
+ifeq ($(MY_OS),msys)
+	REAL_HOME := $(shell cygpath -u "$(USERPROFILE)")
+endif
 
 export OSNAME
 export MY_OS
